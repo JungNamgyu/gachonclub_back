@@ -10,13 +10,13 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8080/club/add
+POST http://ec2-13-125-237-43.ap-northeast-2.compute.amazonaws.com:8080/club/add
 Content-Type: application/json
 
 {
-  "attachmentId": "1",
-  "info": "완전 좋아용",
-  "name": "남규동아리"
+  "attachmentId": "3",
+  "info": "똥돼지",
+  "name": "건호는동아리"
 }
 
 ###
