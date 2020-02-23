@@ -15,7 +15,7 @@ public class Club {
 
     // 동아리 로고
     @Column(nullable = false)
-    private Long attachmentId;
+    private String logo_url;
 
     // 동아리 이름
     @Column(nullable = false)

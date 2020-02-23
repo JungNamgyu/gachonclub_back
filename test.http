@@ -14,9 +14,19 @@ POST http://ec2-13-125-237-43.ap-northeast-2.compute.amazonaws.com:8080/club/add
 Content-Type: application/json
 
 {
-  "attachmentId": "3",
-  "info": "똥돼지",
-  "name": "건호는동아리"
+  "logo_url": "src/Upload/logo_1.png",
+  "info": "봉사 동아리",
+  "name": "호우회"
+}
+###
+
+POST http://localhost:8080/club/add
+Content-Type: application/json
+
+{
+  "logo_url": "src/Upload/logo_1.png",
+  "info": "봉사 동아리",
+  "name": "호우회"
 }
 
 ###
