@@ -2,6 +2,7 @@ package kr.ac.gachon.gc.gachonclub_back.Domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -26,7 +27,8 @@ public class Club {
     private String info;
 
     // 동아리 내용
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = false)
+    @Type(type="text")
     private String data;
 
 }
