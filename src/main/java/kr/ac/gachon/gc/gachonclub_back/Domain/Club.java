@@ -26,9 +26,5 @@ public class Club {
     @Column(nullable = false)
     private String info;
 
-    // 동아리 내용
-    @Column(nullable = false)
-    @Type(type="text")
-    private String data;
 
 }
