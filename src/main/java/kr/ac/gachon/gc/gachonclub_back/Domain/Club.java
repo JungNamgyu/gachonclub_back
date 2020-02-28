@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 public class Club {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long _id;
