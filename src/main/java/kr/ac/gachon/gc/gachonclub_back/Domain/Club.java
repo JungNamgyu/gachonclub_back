@@ -15,10 +15,6 @@ public class Club {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long _id;
 
-    // 동아리 로고
-    @Column(nullable = false)
-    private String logo_url;
-
     // 동아리 이름
     @Column(nullable = false)
     private String name;
@@ -32,4 +28,7 @@ public class Club {
     @Type(type="text")
     private String data;
 
+    // 동아리 내용 사진
+    @Column(nullable = false)
+    private String data_url;
 }
