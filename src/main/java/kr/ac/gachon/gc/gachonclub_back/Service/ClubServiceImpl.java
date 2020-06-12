@@ -39,6 +39,7 @@ public class ClubServiceImpl implements ClubService{
                 .map(p -> {
                     p.setName(Optional.ofNullable(club.getName()).orElse(p.getName()));
                     p.setInfo(Optional.ofNullable(club.getInfo()).orElse(p.getInfo()));
+                    p.setData(Optional.ofNullable(club.getData()).orElse(p.getData()));
 
                     return this.clubRepositroy.save(p);
                 })
