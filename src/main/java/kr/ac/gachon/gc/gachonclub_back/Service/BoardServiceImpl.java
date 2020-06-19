@@ -1,11 +1,11 @@
 package kr.ac.gachon.gc.gachonclub_back.Service;
 
 import kr.ac.gachon.gc.gachonclub_back.Domain.Board;
-import kr.ac.gachon.gc.gachonclub_back.Domain.User;
 import kr.ac.gachon.gc.gachonclub_back.Repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +27,7 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public Board addBoard(Board board) {
+        board.setDate(LocalDateTime.now());
         Optional<Board> found = this.boardRepository.findByTitle(board.getTitle());
         if(found.isPresent()){
             return null;

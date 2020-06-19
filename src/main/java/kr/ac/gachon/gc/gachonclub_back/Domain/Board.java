@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -30,6 +31,6 @@ public class Board {
     private String name;
 
     // 게시판 날짜
-    @Column(nullable = false)
-    private Date date;
+    @Column
+    private LocalDateTime date;
 }
