@@ -15,8 +15,8 @@ public class ClubServiceImpl implements ClubService{
     private ClubRepositroy clubRepositroy;
 
     @Override
-    public List<Club> findAll(String _class) {
-        return this.clubRepositroy.findByClass(_class);
+    public List<Club> findAll(String head) {
+        return this.clubRepositroy.findByHead(head);
     }
 
     @Override

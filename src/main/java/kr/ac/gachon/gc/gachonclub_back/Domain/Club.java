@@ -17,7 +17,7 @@ public class Club {
 
     // 동아리 분류
     @Column(nullable = false)
-    private String _class;
+    private String head;
 
     // 동아리 이름
     @Column(nullable = false)

@@ -13,8 +13,8 @@ public class ClubController {
     @Autowired
     ClubService clubService;
 
-    @GetMapping("/club/getAll/{_class}")
-    public List getAllClub(@PathVariable String _class){ return this.clubService.findAll(_class); }
+    @GetMapping("/club/getAll/{head}")
+    public List getAllClub(@PathVariable String head){ return this.clubService.findAll(head); }
 
     @GetMapping("/club/get/{id}")
     public Club getClub(@PathVariable Long id){

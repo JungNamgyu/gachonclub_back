@@ -7,6 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ClubRepositroy extends JpaRepository<Club, Long> {
-    List<Club> findByClass(String _class);
+    List<Club> findByHead(String Head);
     Optional<Club> findByName(String name);
 }

@@ -10,10 +10,11 @@ GET http://localhost:8080/club/getAll
 Accept: application/json
 
 ###
-POST http://localhost:8080/club/add
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
 Content-Type: application/json
 
 {
+  "_class": "중앙동아리",
   "name": "유양우",
   "info": "스톤에이지",
   "data": "스톤에이지 동아리 여러분 사랑합니다."
@@ -21,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/user/getAll
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/getAll
 Accept: application/json
 ###
 
