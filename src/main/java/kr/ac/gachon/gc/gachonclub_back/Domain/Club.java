@@ -15,6 +15,10 @@ public class Club {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long _id;
 
+    // 동아리 분류
+    @Column(nullable = false)
+    private String range;
+
     // 동아리 이름
     @Column(nullable = false)
     private String name;
@@ -27,8 +31,4 @@ public class Club {
     @Column(nullable = false)
     @Type(type="text")
     private String data;
-
-    // 동아리 내용 사진
-    @Column(nullable = false)
-    private String data_url;
 }

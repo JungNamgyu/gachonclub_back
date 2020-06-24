@@ -6,23 +6,22 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
-GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/getAll
+GET http://localhost:8080/club/getAll
 Accept: application/json
 
 ###
-POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
+POST http://localhost:8080/club/add
 Content-Type: application/json
 
 {
   "name": "유양우",
-  "info": "기독교 동아리",
-  "data_url": "ubf.jpg",
-  "data": "❤가천대 중앙 기독교 동아리 UBF❤\n안녕하세요!\n가천대 중앙 기독교 동아리 UBF입니다.\n\nUBF(University Bible Fellowship, 대학생 성경읽기 선교회)는\n일대일 성경공부를 통해 예수님의 말씀을 배우고 그 말씀대로 살아가는 건강한 기독교 동아리입니다.\n\n🐑주요 활동\n가천대 기독학생 연합 예배\n일대일 성경공부\n정기 및 야외 모임\n가천 UBF 여름 및 겨울 수련회\nUBF 전국 학생 수련회\n\n🐑모집 기간\n상시 모집\n\n🐑모집 대상\n가천대학교 글로벌캠퍼스 신입생 및 재학생\n\n🐑동아리방 위치\n학생회관 220호\n\n🐑지원 방법\nhttp://naver.me/xxXMBrGh\n지원서 작성 후 제출\n\n🐑연락처\n회장 박은혜 010 7536 1502\n대표간사 최은혜 010 6233 3508\n\n🚫가천대 UBF는 신천지 등 이단의 출입을 금합니다.\n"
+  "info": "스톤에이지",
+  "data": "스톤에이지 동아리 여러분 사랑합니다."
 }
 
 ###
 
-GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/getAll
+GET http://localhost:8080/user/getAll
 Accept: application/json
 ###
 
@@ -31,16 +30,16 @@ Accept: application/json
 
 ###
 
-POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/add
+POST http://localhost:8080/user/add
 Content-Type: application/json
 
 {
-  "userId": "jmg6017",
+  "userId": "정남규",
   "userPw": "1234",
-  "name" : "정민규",
-  "major" : "대구소프트웨어고등학교",
-  "club" : "Namgyu Online Judge",
-  "position": "막내"
+  "name" : "정남규",
+  "major" : "컴퓨터공학과",
+  "club" : "알고리즘",
+  "position": "스터디장"
 }
 ###
 
@@ -60,9 +59,10 @@ POST http://localhost:8080/board/add
 Content-Type: application/json
 
 {
-  "title": "변건오",
-  "content": "❤가천대 중앙 기독교 동아리 UBF❤\n안녕하세요!\n가천대 중앙 기독교 동아리 UBF입니다.\n\nUBF(University Bible Fellowship, 대학생 성경읽기 선교회)는\n일대일 성경공부를 통해 예수님의 말씀을 배우고 그 말씀대로 살아가는 건강한 기독교 동아리입니다.\n\n🐑주요 활동\n가천대 기독학생 연합 예배\n일대일 성경공부\n정기 및 야외 모임\n가천 UBF 여름 및 겨울 수련회\nUBF 전국 학생 수련회\n\n🐑모집 기간\n상시 모집\n\n🐑모집 대상\n가천대학교 글로벌캠퍼스 신입생 및 재학생\n\n🐑동아리방 위치\n학생회관 220호\n\n🐑지원 방법\nhttp://naver.me/xxXMBrGh\n지원서 작성 후 제출\n\n🐑연락처\n회장 박은혜 010 7536 1502\n대표간사 최은혜 010 6233 3508\n\n🚫가천대 UBF는 신천지 등 이단의 출입을 금합니다.\n",
-  "name": "박건호"
+  "club" : "스톤에이지",
+  "title": "회비",
+  "content": "회비는 월 1만원",
+  "name": "유양우"
 }
 ###
 PUT http://localhost:8080/board/edit
@@ -75,5 +75,7 @@ Content-Type: application/json
   "name": "박건호"
 }
 ###
-GET http://localhost:8080/board/getAll
+GET http://localhost:8080/board/getAll/스톤에이지
 Content-Type: application/json
+
+###

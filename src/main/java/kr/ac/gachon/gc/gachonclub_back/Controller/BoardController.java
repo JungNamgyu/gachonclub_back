@@ -12,9 +12,9 @@ public class BoardController {
     @Autowired
     BoardService boardService;
 
-    @GetMapping("/board/getAll")
-    public List getAllBoard(){
-        return this.boardService.findAll();
+    @GetMapping("/board/getAll/{club}")
+    public List getAllBoard(@PathVariable String club){
+        return this.boardService.findAll(club);
     }
 
     @GetMapping("/board/get/{id}")

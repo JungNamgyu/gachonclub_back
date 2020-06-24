@@ -13,9 +13,9 @@ public class ClubController {
     @Autowired
     ClubService clubService;
 
-    @GetMapping("/club/getAll")
-    public List getAllClub(){
-        return this.clubService.findAll();
+    @GetMapping("/club/getAll/{range}")
+    public List getAllClub(@PathVariable String range){
+        return this.clubService.findAll(range);
     }
 
     @GetMapping("/club/get/{id}")

@@ -15,8 +15,8 @@ public class ClubServiceImpl implements ClubService{
     private ClubRepositroy clubRepositroy;
 
     @Override
-    public List<Club> findAll() {
-        return this.clubRepositroy.findAll();
+    public List<Club> findAll(String range) {
+        return this.clubRepositroy.findByRange(range);
     }
 
     @Override

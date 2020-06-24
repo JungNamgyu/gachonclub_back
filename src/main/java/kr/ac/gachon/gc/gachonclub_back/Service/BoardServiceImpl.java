@@ -16,8 +16,8 @@ public class BoardServiceImpl implements BoardService{
     private BoardRepository boardRepository;
 
     @Override
-    public List<Board> findAll() {
-        return this.boardRepository.findAll();
+    public List<Board> findAll(String club) {
+        return this.boardRepository.findByClub(club);
     }
 
     @Override
@@ -28,10 +28,6 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public Board addBoard(Board board) {
         board.setDate(LocalDateTime.now());
-        Optional<Board> found = this.boardRepository.findByTitle(board.getTitle());
-        if(found.isPresent()){
-            return null;
-        }
         return this.boardRepository.save(board);
     }
 
@@ -41,7 +37,7 @@ public class BoardServiceImpl implements BoardService{
                 .map(p -> {
                     p.setTitle(Optional.ofNullable(board.getTitle()).orElse(p.getTitle()));
                     p.setContent(Optional.ofNullable(board.getContent()).orElse(p.getContent()));
-                    p.setDate(Optional.ofNullable(board.getDate()).orElse(p.getDate()));
+                    p.setDate(LocalDateTime.now());
 
                     return this.boardRepository.save(p);
                 })
