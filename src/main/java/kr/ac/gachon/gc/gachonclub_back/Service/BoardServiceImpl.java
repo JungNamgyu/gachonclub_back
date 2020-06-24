@@ -27,7 +27,6 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public Board addBoard(Board board) {
-        board.setDate(LocalDateTime.now());
         return this.boardRepository.save(board);
     }
 
@@ -37,7 +36,6 @@ public class BoardServiceImpl implements BoardService{
                 .map(p -> {
                     p.setTitle(Optional.ofNullable(board.getTitle()).orElse(p.getTitle()));
                     p.setContent(Optional.ofNullable(board.getContent()).orElse(p.getContent()));
-                    p.setDate(LocalDateTime.now());
 
                     return this.boardRepository.save(p);
                 })

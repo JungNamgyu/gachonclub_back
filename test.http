@@ -14,19 +14,19 @@ POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
 Content-Type: application/json
 
 {
-  "_class": "중앙동아리",
-  "name": "유양우",
-  "info": "스톤에이지",
+  "head": "중앙동아리",
+  "name": "스톤에이지",
+  "info": "유양우",
   "data": "스톤에이지 동아리 여러분 사랑합니다."
 }
 
 ###
 
-GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/getAll
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/get/1
 Accept: application/json
 ###
 
-GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/get/a
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/get/1
 Accept: application/json
 
 ###
@@ -76,7 +76,7 @@ Content-Type: application/json
   "name": "박건호"
 }
 ###
-GET http://localhost:8080/board/getAll/스톤에이지
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/getAll/스톤에이지
 Content-Type: application/json
 
 ###
