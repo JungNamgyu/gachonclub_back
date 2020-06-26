@@ -2,19 +2,19 @@ package kr.ac.gachon.gc.gachonclub_back.Configuration;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
-import java.sql.Date;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Converter(autoApply = true)
-public class LocalDateAttributeConverter implements AttributeConverter<LocalDate, Date> {
+class LocalDateTimeAttributeConverter implements AttributeConverter<LocalDateTime, Timestamp> {
 
     @Override
-    public Date convertToDatabaseColumn(LocalDate locDate) {
-        return locDate == null ? null : Date.valueOf(locDate);
+    public Timestamp convertToDatabaseColumn(LocalDateTime locDateTime) {
+        return locDateTime == null ? null : Timestamp.valueOf(locDateTime);
     }
 
     @Override
-    public LocalDate convertToEntityAttribute(Date sqlDate) {
-        return sqlDate == null ? null : sqlDate.toLocalDate();
+    public LocalDateTime convertToEntityAttribute(Timestamp sqlTimestamp) {
+        return sqlTimestamp == null ? null : sqlTimestamp.toLocalDateTime();
     }
 }
