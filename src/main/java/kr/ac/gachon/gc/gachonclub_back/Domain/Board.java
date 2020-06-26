@@ -34,4 +34,12 @@ public class Board {
     // 게시판 글쓴이
     @Column(nullable = false)
     private String name;
+
+    // 게시판 작성시간
+    @Column(nullable = false)
+    private LocalDateTime date;
+
+    // 캘린더 일정
+    @Column(nullable = false)
+    private String calendar;
 }

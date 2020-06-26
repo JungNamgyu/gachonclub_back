@@ -21,12 +21,16 @@ public class BoardServiceImpl implements BoardService{
     }
 
     @Override
-    public Board findById(Long boardId) {
-        return this.boardRepository.findById(boardId).orElse(null);
+    public List<Board> findByClubAndCalendarContaining(String club, String calendar) {
+        return this.boardRepository.findByClubAndCalendarContaining(club, calendar);
     }
 
     @Override
+    public Board findById(Long boardId) { return this.boardRepository.findById(boardId).orElse(null); }
+
+    @Override
     public Board addBoard(Board board) {
+        board.setDate(LocalDateTime.now());
         return this.boardRepository.save(board);
     }
 
@@ -36,7 +40,8 @@ public class BoardServiceImpl implements BoardService{
                 .map(p -> {
                     p.setTitle(Optional.ofNullable(board.getTitle()).orElse(p.getTitle()));
                     p.setContent(Optional.ofNullable(board.getContent()).orElse(p.getContent()));
-
+                    p.setDate(LocalDateTime.now());
+                    p.setCalendar(Optional.ofNullable(board.getCalendar()).orElse(p.getCalendar()));
                     return this.boardRepository.save(p);
                 })
                 .orElse(null);

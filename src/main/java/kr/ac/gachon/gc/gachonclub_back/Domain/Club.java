@@ -27,6 +27,10 @@ public class Club {
     @Column(nullable = false)
     private String info;
 
+    // 동아리 로고
+    @Column(nullable = false)
+    private String logo;
+
     // 동아리 내용
     @Column(nullable = false)
     @Type(type="text")

@@ -17,6 +17,11 @@ public class BoardController {
         return this.boardService.findAll(club);
     }
 
+    @GetMapping("/board/getAll/{club}/{calendar}")
+    public List getAllBoard_calendar(@PathVariable String club, @PathVariable String calendar){
+        return this.boardService.findByClubAndCalendarContaining(club, calendar);
+    }
+
     @GetMapping("/board/get/{id}")
     public Board getBoard(@PathVariable Long id){
         return this.boardService.findById(id);

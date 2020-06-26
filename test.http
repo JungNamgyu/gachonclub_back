@@ -10,13 +10,14 @@ GET http://localhost:8080/club/getAll
 Accept: application/json
 
 ###
-POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
+POST http://localhost:8080/club/add
 Content-Type: application/json
 
 {
   "head": "중앙동아리",
   "name": "스톤에이지",
   "info": "유양우",
+  "logo": "gachonhealth.jpg",
   "data": "스톤에이지 동아리 여러분 사랑합니다."
 }
 
@@ -35,12 +36,12 @@ POST http://localhost:8080/user/add
 Content-Type: application/json
 
 {
-  "userId": "정남규",
+  "userId": "test",
   "userPw": "1234",
   "name" : "정남규",
   "major" : "컴퓨터공학과",
-  "club" : "알고리즘",
-  "position": "스터디장"
+  "club" : "스톤에이지",
+  "position": "동아리 회장"
 }
 ###
 
@@ -63,7 +64,8 @@ Content-Type: application/json
   "club" : "스톤에이지",
   "title": "회비",
   "content": "회비는 월 1만원",
-  "name": "유양우"
+  "name": "정남규",
+  "calendar": "20200626"
 }
 ###
 PUT http://localhost:8080/board/edit
@@ -76,7 +78,7 @@ Content-Type: application/json
   "name": "박건호"
 }
 ###
-GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/getAll/스톤에이지
+GET http://localhost:8080/board/getAll/스톤에이지/2020
 Content-Type: application/json
 
 ###
