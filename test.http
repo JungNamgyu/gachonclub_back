@@ -10,15 +10,15 @@ GET http://localhost:8080/club/getAll
 Accept: application/json
 
 ###
-POST http://localhost:8080/club/add
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/club/add
 Content-Type: application/json
 
 {
   "head": "중앙동아리",
-  "name": "스톤에이지",
-  "info": "유양우",
-  "logo": "gachonhealth.jpg",
-  "data": "스톤에이지 동아리 여러분 사랑합니다."
+  "name": "UBF",
+  "info": "대학생 성경읽기 선교회",
+  "logo": "ubf.jpg",
+  "data": "학생회관 220호"
 }
 
 ###
@@ -32,15 +32,15 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8080/user/add
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/user/add
 Content-Type: application/json
 
 {
   "userId": "test",
   "userPw": "1234",
-  "name" : "정남규",
-  "major" : "컴퓨터공학과",
-  "club" : "스톤에이지",
+  "name" : "박은혜",
+  "major" : "?????????",
+  "club" : "UBF",
   "position": "동아리 회장"
 }
 ###
@@ -57,18 +57,18 @@ Content-Type: application/json
   "position": "막내"
 }
 ###
-POST http://localhost:8080/board/add
+POST http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/add
 Content-Type: application/json
 
 {
-  "club" : "스톤에이지",
-  "title": "회비",
-  "content": "회비는 월 1만원",
-  "name": "정남규",
-  "calendar": "20200626"
+  "club" : "UBF",
+  "title": "동아리 정보",
+  "content": "❤가천대 중앙 기독교 동아리 UBF❤\n안녕하세요!\n가천대 중앙 기독교 동아리 UBF입니다.\n\nUBF(University Bible Fellowship, 대학생 성경읽기 선교회)는\n일대일 성경공부를 통해 예수님의 말씀을 배우고 그 말씀대로 살아가는 건강한 기독교 동아리입니다.\n\n🐑주요 활동\n가천대 기독학생 연합 예배\n일대일 성경공부\n정기 및 야외 모임\n가천 UBF 여름 및 겨울 수련회\nUBF 전국 학생 수련회\n\n🐑모집 기간\n상시 모집\n\n🐑모집 대상\n가천대학교 글로벌캠퍼스 신입생 및 재학생\n\n🐑동아리방 위치\n학생회관 220호\n\n🐑지원 방법\nhttp://naver.me/xxXMBrGh\n지원서 작성 후 제출\n\n🐑연락처\n회장 박은혜 010 7536 1502\n대표간사 최은혜 010 6233 3508\n\n🚫가천대 UBF는 신천지 등 이단의 출입을 금합니다.\n",
+  "name": "박은혜",
+  "calendar": "2020/06/26"
 }
 ###
-PUT http://localhost:8080/board/edit
+DELETE http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/delete/1
 Content-Type: application/json
 
 {
@@ -78,7 +78,7 @@ Content-Type: application/json
   "name": "박건호"
 }
 ###
-GET http://localhost:8080/board/getAll/스톤에이지/2020
+GET http://ec2-3-34-40-173.ap-northeast-2.compute.amazonaws.com:8080/board/getAll/UBF
 Content-Type: application/json
 
 ###
