@@ -3,6 +3,7 @@ package kr.ac.gachon.gc.gachonclub_back.Domain;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -37,6 +38,7 @@ public class Board {
 
     // 게시판 작성시간
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime date;
 
     // 캘린더 일정
