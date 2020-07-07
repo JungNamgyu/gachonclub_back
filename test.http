@@ -17,7 +17,7 @@ Content-Type: application/json
   "head": "과동아리",
   "info": "NOJ - 알고리즘 동아리",
   "name": "Namgyu Online Judge",
-  "logo": "",
+  "logo": "NOJ.png",
   "data": "헤헤헿"
 }
 
