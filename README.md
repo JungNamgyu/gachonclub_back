@@ -1,17 +1,19 @@
-가천대학교 - 모바일 프로그래밍
+#가천대학교 - 모바일 프로그래밍
 
-모바일 웹서버 구현
+#모바일 웹서버 구현
 
-개발환경 - SpringBoot, MySql, JPA
-사용 라이브러리 - lombok
+#개발환경
+ SpringBoot, MySql, JPA
+#사용 라이브러리
+ lombok
 
-Service
+#Service
  각 모델의 CRUD 기능 구현
 
-Repository
+#Repository
  JPA를 통한 MySql 연동
  
-디자인패턴 - MVC 패턴
+#디자인패턴 - MVC 패턴
  모델 - Domain
   1. 게시판(Board)
      각 동아리의 공지사항 정보
